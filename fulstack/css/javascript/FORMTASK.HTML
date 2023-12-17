@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- form -->
+    <form>
+    <label>name</label>
+    <input type="text" onkeyup="upper(this)" value=""onfocus="change(this)" ><br>
+    <label>qualification</label>
+    <input type="text" onkeyup="upper(this)" value="" onfocus="change(this)"><br>
+    <label>DOB</label>
+    <input type="text" onkeyup="upper(this)" value="" onfocus="change(this)"><br>
+    <label>upload an image</label>
+    <input type="file" onfocus="change(this)"><br>
+    <button type="submit">submit</button>
+    </form>
+    <img src="C:\Users\DELL\Desktop\imags\homepod-select-midnight-202210.jpg" alt="Example Image" onmouseover="changeimg(this)">
+    <script>
+        //a
+        window.onload=function(){
+            alert("welcome all");
+        }
+        //b
+        function change(element){
+            element.style.background="pink";
+                
+        }
+        //c
+        function upper(element){
+            element.value=element.value.toUpperCase();
+        }
+        //d
+        function changeimg(element){
+               element.style.height="200px";
+               element.style.width="200px";
+        }
+        //e
+        window.onsubmit=function(){
+            alert("thank you");
+        }
+        
+
+           
+           
+        
+            
+        
+
+    </script>
+</body>
+</html>

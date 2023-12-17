@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="loops.js"></script>
+</head>
+<body>
+    
+    <label>enter the value</label>
+    <input type="number" id="num1">
+    <button onclick="show()">submit</button>
+    <!-- <p id="para">
+
+    </p> -->
+    <!-- <label>enter a number</label>
+    <input type="number" id="n1"><br> -->
+    <!-- <label>number2</label>
+    <input type="number" id="n2"> -->
+    <!-- <button onclick="show()">submit</button>
+    <p id="result"></p> -->
+    <script>
+        function show(){
+            var a=document.getElementById("num1").value;
+            for(let i=1;i<=10;i++){
+                
+                document.write(i+"*"+a+"=" +i*a+"<br>");
+            }
+        }
+            
+        // let i=0;
+        // let text="";
+        // do{
+        //   text+=i+"<br>";
+        //   i++;
+
+        // }while(i<5);
+        // document.getElementById("para").innerHTML=text;
+    //     var n=5;
+    //     var a=0;
+
+    //    for(let i=1;i<n;i++){
+
+        
+    //     a=a+i;
+    //    }
+    //    document.write(a+"<br>");
+
+    
+
+
+ // function show(){
+ // var a=document.getElementById("num1").value;
+ // var n=1;
+ // while(n<=a){
+ //     document.write("javascript"+"<br>");
+ //     n++;
+     
+ // }
+
+//     while(a<0 || a>0){
+//    a>0?document.write("positive"):document.write("negative")
+//    break;
+// }
+// }
+</script>
+
+
+</body>
+</html>

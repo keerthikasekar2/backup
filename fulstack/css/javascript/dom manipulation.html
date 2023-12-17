@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="d1">
+        <h1>element</h1>
+        <p>paragraph</p>
+        <button onclick="show()">create tag</button>
+    </div>
+    <script>
+        function show(){
+            // var a=document.createElement("div");
+            // var b=document.createTextNode("hello");
+            // a.appendChild(b);
+            // var c=document.getElementById("d");
+            // document.body.insertBefore(a,c);
+            // document.body.insertAfter(a,c);
+             var a=document.createElement("p");
+            var b=document.createTextNode("hi world");
+            a.appendChild(b);
+            var c=document.getElementById("d1");
+            document.body.insertBefore(a,c);
+
+        }
+        
+
+    </script>
+</body>
+</html>

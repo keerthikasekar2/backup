@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- Write a JavaScript program to count and display dropdown list items in an alert window. -->
+    <select id="prgm">
+        <option>Java</option>
+        <option>JavaScript</option>
+        <option>Python</option>
+        <option>c and c++</option>
+        
+    </select>
+    <button onclick="show()">submit</button>
+    <script>
+        function show(){
+            var a=document.getElementById("prgm");
+            var b="length of dropdown: "+a.length+"\n";
+            for(let i=0;i<a.length;i++){
+                b+=a.options[i].text+"\n";
+            }alert(b);
+        }
+
+    </script>
+</body>
+</html>

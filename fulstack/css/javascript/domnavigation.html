@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="div1">
+    <img src="#">
+    <h1 id="heading">My Shopping List</h1>
+    <p id="para" ><span>hai</span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est impedit corrupti blanditiis molestias itaque amet consectetur id non nemo aut corporis laudantium culpa ex, neque recusandae aperiam odit facere omnis.</p>
+    </div>
+    <script>
+        var a=document.getElementById("div1");
+        // console.log(a.firstChild.nodeName);
+        console.log(document.body.firstChild.nodeName);
+        // console.log(a.firstElementChild.nodeName);
+        // console.log(document.body.lastChild.nodeName);
+        if(a.hasChildNodes){
+            var node=a.childNodes;
+            for(let i=0;i<node.length;i++){
+              console.log(node[i].nodeName);
+            }
+        }
+        console.log(a.parentNode.nodeName);
+        var b=document.getElementById("heading");
+        console.log(b.parentNode.nodeName);
+        console.log(document.documentElement.parentNode.nodeName);
+        console.log(b.nextElementSibling.nodeName);
+        console.log(b.previousElementSibling.nodeName);
+    </script>
+</body>
+</html>

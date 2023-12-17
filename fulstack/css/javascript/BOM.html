@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BOM</title>
+</head>
+<body style="height:2000px;">
+    <!-- browser object model 
+    1.window
+    2.screen
+    3.location
+    4.history
+    5.navigation-->
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
+    <button onclick="show()" id="btn">backward</button>
+    <button onclick="press()" id="btn1">forward</button>
+    <button onclick="an()">submit</button>
+    <a id="atag" href="https://www.google.co.in/?keerthika">google</a>
+    <p id="para"></p>
+    <script>
+        //Window
+        // function show(){
+        //     var a=window.innerWidth;
+        //     var b=window.innerHeight;
+        //     alert("width:"+a+"height"+b);
+
+        // }
+        // function press(){
+        //     var c=document.documentElement.clientWidth;
+        //     var d=document.documentElement.clientHeight;
+        //     alert("width:"+c+"height"+d);
+        // }
+
+        //screen
+        // function show(){
+        //     var a=screen.width;
+        //     var b=screen.height;
+        //     var e=screen.colorDepth;
+        //     var f=screen.pixelDepth;
+        //     alert("width:"+a+"  height:"+b +" colordepth:"+e+" pixeldepth:"+f);
+
+        // }
+        // function press(){
+        //     var c=screen.availWidth
+        //     var d=screen.availHeight;
+        //     alert("width:"+c+"  height"+d);
+        // }
+
+        //navigator
+        // function show(){
+        //     if(navigator.onLine){
+        //         alert("online");
+        //     }
+        //     else{
+        //         alert("offline");
+        //     }
+        // }
+        //cookies
+        // function press(){
+        //     if(navigator.cookieEnabled){
+        //         alert("cookies are enable");
+        //     }
+        //     else{
+        //         alert("cookies are disabled");
+        //     }
+        // }
+        // function press(){
+        //    alert(navigator.language);
+             
+        // }
+        // function an(){
+        //     var a=navigator.appName;
+        //     a+="\n"+navigator.appVersion;
+        //     a+="\n"+navigator.appCodeName;
+        //     a+="\n"+navigator.userAgent;
+        //     a+="\n"+navigator.platform;
+        //     alert("browser info"+a);
+
+        // }
+        // function show(){
+        //     if(navigator.javaEnabled){
+        //         alert("enabled");
+        //     }
+        //     else{
+        //         alert("disabled");
+        //     }
+        // }
+        
+        //location
+        // function show(){
+        //     var a=window.location.href;
+        //     a +="\n"+window.location.protocol;
+        //     a +="\n"+window.location.host;
+        //     a +="\n"+window.location.hostname;
+        //     a +="\n"+window.location.port;
+        //     a +="\n"+window.location.pathname;
+        //     alert(a);
+        // }
+        // var a=document.getElementById("atag");
+        // var b=a.search;
+        // document.getElementById("para").innerHTML="value"+b;
+        //assign
+        // function show(){
+        //     window.location.assign("https://web.whatsapp.com/%F0%9F%8C%90/en");
+
+        // }
+        //replace
+        // function press(){
+        //     window.location.replace("https://web.whatsapp.com/%F0%9F%8C%90/en");
+            
+        // }
+        //reload
+        // function an(){
+        //     window.location.reload();
+            
+        // }
+        //history
+        document.write(history.length);
+        function show(){
+            window.history.back();
+
+        }
+        function press(){
+            window.history.forward();
+        }
+
+
+
+
+    </script>
+</body>
+</html>

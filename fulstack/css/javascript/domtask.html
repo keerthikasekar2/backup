@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            border:2px solid black;
+            display: inline-block;
+            padding: 10px 10px;
+        }
+    </style>
+</head>
+<body>
+    <div>1
+        <div>2
+            <div>3
+                <div>4
+                    <div>5
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <section id="divmsg"></section>
+    <script>
+        var a=document.getElementById("divmsg");
+        function log(msg){
+            a.innerHTML+=("<p>"+msg+"</p>");
+        }
+        function sample(){
+            log("capturing="+this.firstChild.nodeValue.trim());
+        }
+        function bubble(){
+            log("bubbling="+this.firstChild.nodeValue.trim());
+        }
+        var b=document.getElementsByTagName("div");
+        for(var i=0;i<b.length;i++){
+            b[i].addEventListener("click",sample,true);
+            b[i].addEventListener("click",bubble,false);
+        }
+
+    </script>
+</body>
+</html>

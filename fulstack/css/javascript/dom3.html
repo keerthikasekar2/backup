@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>insert adjacent html</h2>
+    <!-- before begin -->
+    <div id="d1">
+        <!-- after begin -->
+        <h1 id="heading">hi everyone</h1>
+        <!-- befor end -->
+    </div>
+    <!-- after end -->
+    <button onclick="show()">submit</button>
+    <script>
+       function show(){
+        var a=document.getElementById("d1");
+        a.insertAdjacentHTML("beforebegin","<p> paragraph1");
+        a.insertAdjacentHTML("afterbegin","<p> paragraph2");
+        a.insertAdjacentHTML("beforeend","<p> paragraph3");
+        a.insertAdjacentHTML("afterend","<p> paragraph4");
+
+       }
+    </script>
+</body>
+</html>

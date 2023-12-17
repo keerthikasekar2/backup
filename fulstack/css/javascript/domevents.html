@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom events</title>
+    <style>
+        div,p,a{
+            padding: 150px 30px;
+            display: block;
+            border: 2px solid black;
+        }
+    </style>
+</head>
+<body>
+   <!-- <div>div
+        <p>paragraph
+            <a href="#">A</a>
+        </p>
+    </div>  -->
+    <!-- <h2>bubbling</h2> -->
+    <!-- <div onclick="alert('bubbling'+this.tagName)">div
+        <p onclick="alert('bubbling'+this.tagName)">paragraph
+            <a onclick="alert('bubbling'+this.tagName)" href="#">A</a>
+        </p>
+    </div> --> 
+    <div id="wrap">div
+        <p class="para">paragraph
+            <a href="#">A</a>
+        </p> 
+        </div>
+
+    <script>
+    var a=document.getElementById("wrap");
+    a.onclick=function(event){
+        event.target.style.backgroundColor="pink";
+        setTimeout(()=>{
+            alert("target"+event.target.tagName+"capturing"+this.tagName);
+            event.target.style.backgroundColor="";
+
+        },0);
+    }
+
+        // function sample(){
+        //     alert("capturing="+this.tagName);
+        // }
+        // var a=document.querySelectorAll("div,p,a");
+        // for(let i of a){
+        //     i.addEventListener("click",sample,true);
+        // }
+
+
+    </script>
+</body>
+</html>

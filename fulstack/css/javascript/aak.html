@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .error{
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <form name="contactForm" onsubmit="return validateForm(event)">
+        <h2>Application Form</h2>
+        <div class="row">
+            <label>Full Name</label>
+            <input type="text" id="fullname" name="name">
+            <div class="error" id="nameErr"></div>
+        </div>
+        <div class="row">
+            <label>Email Address</label>
+            <input type="text" name="email">
+            <div class="error" id="emailErr"></div>
+        </div>
+        <div class="row">
+            <label>Mobile Number</label>
+            <input type="text" name="mobile" maxlength="10">
+            <div class="error" id="mobileErr"></div>
+        </div>
+        <div class="row">
+            <label>Country</label>
+            <select name="country">
+                <option>Select</option>
+                <option>Australia</option>
+                <option>India</option>
+                <option>United States</option>
+                <option>United Kingdom</option>
+            </select>
+            <div class="error" id="countryErr"></div>
+        </div>
+        <div class="row">
+            <label>Gender</label>
+            <div class="form-inline">
+                <label><input type="radio" name="gender" value="male"> Male</label>
+                <label><input type="radio" name="gender" value="female"> Female</label>
+            </div>
+            <div class="error" id="genderErr"></div>
+        </div>
+        <div class="row">
+            <label>Hobbies <i>(Optional)</i></label>
+            <div class="form-inline">
+                <label><input type="checkbox" name="hobbies[]" value="sports"> Sports</label>
+                <label><input type="checkbox" name="hobbies[]" value="movies"> Movies</label>
+                <label><input type="checkbox" name="hobbies[]" value="music"> Music</label>
+            </div>
+        </div>
+        <div class="row">
+            <input type="submit" value="Submit">
+        </div>
+    </form>
+
+    <script>
+        function validateForm(e){
+            e.preventDefault();
+           
+            var name = document.contactForm.name.value;
+            
+            var email = document.contactForm.email.value;
+            var mobile = document.contactForm.mobile.value;
+            var country = document.contactForm.country.value;
+            var gender =  document.contactForm.gender.value;
+            var hobbies = [];
+
+            // validate name
+
+           var nameErr=emailErr=mobileErr=countryErr = true;
+        
+        if (name === ""){
+            // console.log("Work");
+              // errorvalye("nameErr","Enter a  name ");
+               document.getElementById("nameErr").innerHTML= "Enter a  name ";
+            }
+            else{
+                var regax = /^[a-zA-Z\s]+$/;
+                if(!regax.test(name)){
+                    errorvalye("nameErr","Enter a valid  name");
+                }
+                else{
+                    errorvalye("nameErr","");
+                    nameErr = false;
+                }
+            }
+
+              //email
+
+       
+
+if(email ===""){
+    errorvalye("emailErr","Enter email")
+}
+else{
+    var regax = /\S+@\S+\.\S+$/;
+    if(!regax.test(email)){
+        errorvalye("emailErr","Enter a valid Email");
+
+    }
+    else{
+        errorvalye("emailErr","")
+        email=false;
+    }
+}
+    
+    if(mobile ===""){
+        errorvalye("mobileErr","Enter a number");
+    }
+    else{
+        regax = /^[1-9]/
+        if(!regax.test(mobile)){
+            errorvalye("mobileErr","Enter a valid number")
+
+        }
+        else{
+            errorvalye("mobileErr","");
+            mobile=false;
+        }
+    }
+
+        //gender
+
+        if(gender===""){
+            errorvalye("genderErr","choose a gender");
+        }
+        else{
+            errorvalye("genderErr","");
+            gender=false;
+        }
+
+        //country
+
+        if(country===""){
+            errorvalye("countryErr","Choose a Country");
+        }
+        else{
+            errorvalye("countryErr","")
+            country=false;
+        }
+
+        //hobbies
+
+        var checkbox = document.getElementsByName("hobbies[]");
+
+        checkbox.forEach(x =>{
+            if(x.checked){
+                hobbies.push(x.value);
+                console.log(hobbies);
+            }
+
+        })
+    
+        }
+
+
+        let errorvalye = ((Check1,data)=>{
+          document.getElementById(Check1).innerHTML= data;
+        })
+        
+
+        
+    </script>
+</body>
+</html>

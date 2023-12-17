@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document object model</title>
+    <style>
+        .demo {
+            background-color: aqua;
+        }
+    </style>
+</head>
+<body>
+    <p id="para" class="p1">
+        keerthika
+    </p>
+    <div class="demo p1" id="para1">
+        sekar
+    </div>
+    <p id="para2">
+
+    </p>
+    <ul class="candy">
+        <li class="dm 1">kitkat</li>
+        <li class="dm 2">diarymilk</li>
+        <li class="dm 3">milkybar</li>
+        <li class="dm 4">amul</li>
+    </ul>
+    <script>
+        // alert(document.documentElement.getAttribute("lang"));
+        // document.write(document.head.firstElementChild.nodeName);
+        // document.body.style.background="blue";
+        // var a=document.getElementById("para");
+        // a.style.background="red";
+        // a.style.color="blue";
+        // document.write(document.body.firstElementChild.nodeName);
+        // var b=document.getElementsByClassName("p1");
+        // document.write(b.length);
+        // b[1].style.fontWeight="bold";
+        // for(let i in b){
+        //     b[i].style.background="pink";
+        // }
+        // var c=document.getElementsByTagName("div");
+        // document.write(c.length);
+        // var list=document.querySelectorAll("ul li");
+        // document.write(list.length);
+        // var a=document.querySelectorAll("ul li.dm");
+        // a[0].style.textDecoration="line-through";
+        //   var a=document.getElementById("para");
+        //   a.style.color="blue";
+        //   document.write( a.style.color);
+        //   var b=window.getComputedStyle(a);
+        //   document.write(b);
+        //   document.write(b.getPropertyValue("color"));
+        var a=document.getElementById("para1");
+        a.className="data";
+        a.className+="one";
+        var s=document.getElementById("para1").className;
+        document.getElementById("para2").innerHTML=s;
+        a.classList.add("siva");
+    </script>
+</body>
+</html>

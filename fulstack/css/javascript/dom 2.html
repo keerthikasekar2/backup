@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>dom manipulation</title>
+</head>
+<body>
+    <!-- <ul>
+        <li>a</li>
+        <li>b</li>
+        <li>c</li>
+        </ul>
+        <p id="para">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Delectus inventore cupiditate soluta quod perferendis tenetur id aspernatur dignissimos accusamus, quam nihil odit facilis, eaque odio corrupti esse harum cumque fuga!</p> -->
+        <p><a href="#" target="_blank" id="sample">Lorem ipsum dolor sit amet consectetur </a></p>
+        <button id="btn" type="submit">submit</button>
+    <script>
+        var a=document.getElementById("sample");
+        var b=a.getAttribute("href");
+        document.write(b+"<br>");
+        var c=a.getAttribute("target");
+        document.write(c+"<br>");
+        var d=a.getAttribute("id");
+        document.write(d+"<br>");
+        var e=document.getElementById("btn");
+        e.setAttribute("class","b1");
+        a.setAttribute("href","https://web.whatsapp.com/");
+        document.write(a.getAttribute("href")+"<br>");
+        a.removeAttribute("target");
+        
+        
+        // var a=[1,2,3,4,5]
+        // for(i=0;i<10;i++){
+        //     console.log(i);
+        // }
+        // for(let j in a){
+        //     console.log(a[j]);
+        // }
+        // var b=document.querySelectorAll("ul li");
+        // for(var k of b){
+        //     document.write(k.innerHTML);
+        // }
+        // var c=document.getElementById("para");
+        // c.classList.add("p1");
+        //get and set attributes
+
+    </script>
+</body>
+</html>

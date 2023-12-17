@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- <label> enter your country</label>
+    <select id="country" onchange="selectcountry()">
+        <option value="India">India</option>
+        <option value="Srilanka">Srilanka</option>
+        <option value="America">America</option> -->
+
+
+    </select>
+    <!-- <label>gender:</label>
+
+    <label>male</label>
+    <input type="radio" value="male" name="gender" >
+    <label>female</label>
+    <input type="radio" value="female" name="gender" >
+    <label>transgender</label>
+    <input type="radio" value="transgender" name="gender" >
+    <button onclick="gender()">submit</button>
+    <label>hobbies:</label> -->
+
+    <label>listening music</label>
+    <input type="checkbox" value="listening music" id="h1" >
+    <label>spending time with pets</label>
+    <input type="checkbox" value="spending time with pets" id="h2" >
+    <label>reading</label>
+    <input type="checkbox" value="reading" id="h3" >
+    <button onclick="selecthobbies()">submit</button>
+    <!-- <label>username</label>
+    <input type="text" id="user">
+    <label>password</label>
+    <input type="text" id="password">
+    <button type="submit" onclick="show()">submit</button> -->
+    <script>
+        function selecthobbies(){
+            var b=document.getElementById("h1");
+            var c=document.getElementById("h2");
+            var d=document.getElementById("h3");
+            if(b.checked==true && c.checked==true && d.checked==true){
+                alert("choose only chose");
+            }
+            else if(b.checked==true){
+                alert("your hobbies :"+b.value);
+            }
+            else if(c.checked==true){
+                alert("your hobbies :"+c.value);
+            }
+            else if(d.checked==true){
+                alert("your hobbies :"+d.value);
+            }
+            else{
+                alert("choose the correct option");
+            }
+        }
+        function gender(){
+            var a=document.getElementsByName("gender");
+            for(let i=0;i<a.length;i++){
+                if(a[i].checked){
+                    alert(a[i].value);
+                }
+            }
+
+        }
+        // function selectcountry(){
+        //     var a=document.getElementById("country");
+        //     var select=a.options[a.selectedIndex].value;
+        //     alert("selected item"+select);
+        // }
+        // function show(){
+        //     var a=document.getElementById("user").value;
+        //     var b=document.getElementById("password").value;
+        //     if((a=="keerthika")&&(b=="keerthika26!")){
+        //         document.write("login sucessfully");
+        //     }
+        //     else{
+        //         document.write("incorrect password or username");
+        //     }
+        // }
+    </script>
+</body>
+</html>

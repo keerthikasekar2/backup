@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // var student={name:"keerthi",
+        //  age:22,
+        //  gender:"female"};
+        //  document.write(student.name+"<br>");
+        //  document.write(student["age"]);
+         var book={
+            bookname:"wings of fire",
+            authername:"APJ abdul kalam",
+            year:2010,
+            displaydata:function(){
+                console.log("authername",this.authername);
+
+            }
+        }
+        book.displaydata();
+        // document.write("name of the book:"+ book.bookname+"<br>");
+        // document.write("name of the auther:"+ book.authername+"<br>");
+        // document.write("year of published:"+ book.year+"<br>");
+        // book["year"]=2013;
+        // document.write("year of published:"+ book.year+"<br>");
+        // book.genere="biography";
+        // console.log(book);
+        // document.write(book);
+        // var key=prompt("enter the data to be found");
+        // var a=alert(book[key]);
+        // delete book.year;
+        // console.log(book);
+        //calling object methods
+        // var person={name:"kaviya",
+        // age:23,
+        //  gender:"female",
+        //  show:function(){
+        //     alert(this.name);
+        //  }}
+        //  person.show();
+        //  person["show"]();
+         //assign an object to a variable
+        //  var user=person;
+        //  console.log(user.name);
+        // var library={
+        //     tittle:"js",
+        //     author:"lenora",
+        //     readingStatus:true,
+        //     price:function(){alert(this.tittle)}
+        // }
+        // document.write(library["readingStatus"]);
+        // library["price"]();
+        var library2=[{
+            tittle:"js",
+            author:"lenora",
+            readingStatus:true,
+            price:function(){alert(this.tittle)}
+        },
+        {
+            tittle:"java",
+            author:"abc",
+            readingStatus:false,
+            price:function(){alert(this.tittle)}
+        }]
+        // console.log(library2);
+        for(var i=0;i<library2.length;i++){ 
+            var book=library2[i].tittle+library2[i].author;
+            // document.write(book+"<br>");
+            if(library2[i].readingStatus==true){
+                document.write("book read"+book+"<br>");
+
+            }
+            else{
+                document.write("book not read"+"<br>");
+            }
+        }
+
+
+
+    </script>
+</body>
+</html>

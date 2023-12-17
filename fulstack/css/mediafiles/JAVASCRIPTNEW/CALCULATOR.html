@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #cal{
+            width: 250px;
+            height: 300px;
+            background-color: black;
+            border-radius: 20px;
+            margin-left: 500px;
+            margin-top: 200px;
+        }
+        #input{
+            display: flex;
+            flex-direction: row;
+        }
+        #inputbar{
+            margin-top: 20px;
+            margin-left: 20px;
+            padding-top: 8px;
+           height: 30px;
+           width: 160px;
+           border-radius: 10px;
+           background-color: gray;
+           text-align: center;
+           /* pointer-events: none; */
+
+        }
+        #clear{
+            height: 35px;
+            width: 35px;
+            margin-left: 10px;margin-top: 20px;
+            background-color: orange;
+            border-radius: 10px;
+        }
+        .btn{
+            background-color: orange;
+            height: 35px;
+            width: 35px;
+            margin-left: 20px;
+            margin-top: 20px;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div id="cal">
+        <div id="input">
+            <div id="inputbar"></div>
+            <button id="clear">c</button>
+        </div>
+        <div id="col">
+            <div id="row1">
+                <button id="btn1" class="btn" value="1">1</button>
+                <button  id="btn2"class="btn" value="2">2</button>
+                <button  id="btn3"class="btn" value="3">3</button>
+                <button  id="btn+"class="btn" value="+">+</button>
+            </div>
+            <div id="row2">
+                <button  id="btn4" class="btn" value="4">4</button>
+                <button  id="btn5" class="btn" value="5">5</button>
+                <button  id="btn6"class="btn" value="6">6</button>
+                <button  id="btn-"class="btn" value="-">-</button>
+            </div>
+            <div id="row3">
+                <button  id="btn7"class="btn" value="7">7</button>
+                <button  id="btn8"class="btn" value="8">8</button>
+                <button  id="btn9"class="btn" value="9">9</button>
+                <button  id="btn*"class="btn" value="*">*</button>
+            </div>
+            <div id="row4">
+                <button  id="btn0"class="btn" value="0">0</button>
+                <button  id="btn."class="btn" value=".">.</button>
+                <button  id="btn="class="btn" >=</button>
+                <button  id="btn/"class="btn" value="/">/</button>
+            </div>
+
+        </div>
+    </div>
+    <script src="cal.js"></script>
+</body>
+</html>

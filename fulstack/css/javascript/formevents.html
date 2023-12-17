@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function load(){
+            document.bgColor="blue";
+            window.setTimeout("load1()",200);
+
+
+        }function load1(){
+            document.bgColor="pink";
+            window.setTimeout("load()",100);
+        }
+        
+    </script>
+</head>
+<body onload="load()">
+    <select  id="dropdown" onchange="change()">
+        <option value="java">java</option>
+        <option value="JavaScript">JavaScript</option>
+        <option value="c">c</option>
+    </select>
+    <p id="para"></p>
+    
+    <label>onfocus</label>
+    <input type="text" id="ip" onfocus="sample(this.id)">
+    <label>onblur</label>
+    <input type="text" id="ip1" onblur="blurf()">
+    <form onsubmit="submitform()">
+        <input type="text" placeholder="enter name" required>
+        <button>submit</button>
+    </form>
+
+    
+
+    <script>
+        function submitform(){
+            alert("thank you");
+        }
+        function change(){
+            a=document.getElementById("dropdown").value;
+            document.getElementById("para").innerHTML="selected item :"+a;
+            // alert("selected item: "+a);
+        }
+        function sample(a){
+            document.getElementById(a).style.background="pink";
+            document.getElementById(a).style.color="blue";
+        }
+        function blurf(){
+            var c=document.getElementById("ip1");
+            c.value=c.value.toUpperCase();
+            c.style.color="blue";
+        }
+</script>
+<p id="p1">hello everyone</p>
+
+<script>
+    function display(){
+        var w=window.outerWidth;
+        var h=window.outerHeight;
+        
+        var d="window height"+h+"window width"+w;
+        document.getElementById("p1").innerHTML=d;
+    }window.onresize=display;
+</script>
+</body>
+</html>

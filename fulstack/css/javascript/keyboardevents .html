@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label>keydown</label>
+    <input type="text" onkeydown="show()">
+    <p id="para1"></p>
+    <label>keypress</label>
+    <input type="text" onkeypress="press()"><br>
+    <label>keyup</label>
+    <input id="ip" type="text" onkeyup="pressit()">
+    <script>
+        function show(){
+           document.getElementById("para1").innerHTML="you have pressed a key";
+        }
+        function press(){
+            alert("enter ur name");
+        }
+        function pressit(){
+            x=document.getElementById("ip");
+            x.value=x.value.toUpperCase();
+        }
+    </script>
+</body>
+</html>

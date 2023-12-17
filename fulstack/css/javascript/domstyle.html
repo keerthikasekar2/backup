@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet quo nulla veritatis maiores ipsum mollitia sint accusantium, laboriosam debitis! Et rerum repellendus doloribus debitis veritatis necessitatibus eius facere. Facilis, dolores.</p>
+    <div id="div1">
+        <h1 id="heading">hai</h1>
+        <p id="p1">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+    </div>
+    
+    <script>
+        var a=document.getElementById("para");
+        a.style.color="pink";
+        document.write(a.style.color);
+        a.style.background="blue";
+        a.style.background="blue";
+        
+        //computed style
+        var b=window.getComputedStyle(a);
+        document.write(b.getPropertyValue("color"));
+        document.write(b.getPropertyValue("background-color"));
+        var k=document.getElementById("div1");
+        console.log(k.firstElementChild.nodeName);
+        var c=document.getElementById("heading");
+        console.log(c.nextElementSibling.nodeName);
+        var d=document.getElementById("p1");
+        function add(){
+            document.write(20+30);
+        }
+        d.addEventListener("click",add)
+        // d.addEventListener("click",()=>{
+        //     alert("hello");
+        // })
+
+
+    </script>
+    <p id="para1">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+    <b id="bold"></b>
+    <script>
+        var p=document.getElementById("para1");
+        p.addEventListener("dblclick",deletedata);
+        function deletedata(e){
+            document.getElementById("bold").innerHTML+="type of event: "+e.type;
+            p.removeEventListener("dblclick",deletedata);
+
+        }
+        
+    </script>
+</body>
+</html>

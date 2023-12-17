@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body></body>
+<p>
+    out of property<span class="pro1"></span>
+</p>
+<p>
+    not out of property<span id="pro2"></span>
+</p><button onclick="show()">submit</button>
+<script>
+    function show(){
+        function car(a,b){this.model=a,this.model=b}//this used to indicate an object its a keyword
+        var c1=new car("bmw","audi");
+        console.log(typeof(c1));
+        result=c1.hasOwnProperty("model");
+        result1=c1.hasOwnProperty("manufacturing");
+        document.querySelector(".pro1").textContent=result;
+        document.querySelector("#pro2").textContent=result1;
+
+    }
+    //get own property
+    function find(obj){
+        return Object.getOwnPropertyNames(obj).filter(function(property)
+        {return typeof obj[property]=="function"});
+    }
+    console.log("method1",find(Math));
+    console.log("method2",find(Array));
+
+    function pro(obj){
+        return Object.getOwnPropertyNames(obj);
+
+    }console.log("method3",pro(Array));
+
+    //check if contain given key
+    function haskey(obj,key){
+        return obj!=null&&hasOwnProperty.call(obj,key);
+        
+
+    }console.log(haskey({"red":1,"pink":2,"blue":3},"black"));
+    var arr = [1, 0, 3, 1, false, 5, 1, 4, 7];
+var result = arr.find(function(element)
+{ return element > 4; });
+document.write(result);
+
+</script>
+</body>
+</html>

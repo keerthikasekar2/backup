@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BOM regular expression</title>
+</head>
+<body>
+    <!-- <label for="">email</label>
+    <input type="text"  id="ip">
+    <button onclick="check()">submit</button> -->
+    <p>\s is for whitespace
+        \S is  for non whitespace
+        \d is for digit
+        \D is for not a digit
+        \w -word
+        \W-not a word
+        \g-global
+        * all
+        \b-
+        
+    </p>
+    
+    <script>
+        // var a="Mr.sekar";
+        // var b=/^Mr\./;
+        // if(b.test(a)){
+        //     document.write("match found");
+
+        // }
+        // else{
+        //     document.write("match not found");
+        // }
+        // var c=new RegExp("^Mr\\.");
+        // if(c.test(a)){
+        //     document.write("match found");
+
+        // }
+        // else{
+        //     document.write("match not found");
+        // }
+        // function check(){
+        //     var d=document.getElementById("ip").value;
+        //     var e=/@/;
+        //     if(e.test(d)){
+        //         document.write("login successful");
+        //     }
+        //     else{
+        //         document.write("use @");
+        //     }
+
+        // }
+        // var x=/ca[kf]e/;
+        // var y="he was eating cake in a cafe ";
+        // if(x.test(y)){
+        //     document.write("match found");
+        // }
+        // else{
+        //     document.write("match not found");
+        // }
+        // var a=/\s/;
+        // var a=/\s/g;
+        // var b="hello every one";
+        // var c="$";
+        // document.write(b.replace(a,c));
+        // document.write(b.replace(/ /g,"@"));
+        // var d=/e$/;
+        // var arr=["replace","fee","fine","siva"];
+        // for(var i of arr){
+        //     if(d.test(i)){
+        //         document.write(i);
+        //     }
+        // }
+        // var k="i Ate cookies and i Ate icecream";
+        // var x=/ate/gi;
+        // if(x.test(k)){
+        //     document.write("found");
+        // }
+        // else{
+        //     document.write("not found");
+        // }
+        // document.write(k.match(x).length);
+        //alternation |
+        var s="Lorem ipsum dolor sit amet consectetur adipisicing elit.  Consequuntur magni sit alias iure, numquam eaque quae nostrum, at aliquam hic reiciendis qui minima dolore libero quo quasi, cumque voluptatem veniam."
+        var alt=/Lorem/gi;
+        var match=s.match(alt);
+        var a=/(\blorem\w*)/gi;
+        var r="@";
+        
+        var match1=s.replace(a,r);
+        console.log(match);
+        console.log(match1);
+        
+
+
+
+
+    </script>
+</body>
+</html>

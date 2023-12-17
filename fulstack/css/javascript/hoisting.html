@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+        //Strict mode: Undeclared Variables are Not Allowed As you already know, in strict mode, 
+        // all variables must be declared. if you assign a value to an identifier that is not a 
+        // declared variable, a ReferenceError will be thrown.
+        // "use strict";
+        // show()
+        // a=5;
+        // document.write(a);
+        // a=10;
+        // function show(){
+        //     document.write("hello");
+        // }
+       //closure
+         var count=0;
+         function show(){
+            return count+=1;
+         }show()
+         console.log(count);
+         show()
+         console.log(count);
+         show()
+         console.log(count);
+         count=50;
+         show()
+         console.log(count);
+
+    </script>
+</body>
+</html>

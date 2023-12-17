@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head id="header">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+       
+    </script>
+</head>
+<body id="body">
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit</p>
+    <p id="para1">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Recusandae quod inventore odio incidunt distinctio, eveniet, ut similique eligendi cupiditate ad animi exercitationem doloremque dolores quas aperiam provident maxime aut. Culpa.</p>
+    <div id="data"class="defeat">MY CLASS</div>
+    <a href="www.google.com" target="_hype_" id="link1">google</a>
+    <p>keerthika</p>
+    
+    <script>
+        // 1.Write a JavaScript program to :
+        //a. Apply style on a paragraph by 
+        //i. Setting the background color to blue and text Color to red.
+        var a=document.getElementById("para1");
+        a.style.background="blue";
+        a.style.color="red";
+        //ii.Change the font size to 30px and weight to bold.
+        a.style.fontSize="30px";
+        a.style.fontWeight="bold";
+        //b.Get the style information of
+        //i.color and font style of the paragraph.
+        document.write(a.style.color);
+        document.write(a.style.background);
+        document.write(a.style.fontSize);
+        document.write(a.style.fontWeight);
+        //c.Use Computed style and get the value of color and font style from the paragraph.
+        var b=window.getComputedStyle(a);
+        document.write(b.getPropertyValue("color"));
+        document.write(b.getPropertyValue("background-color"));
+        document.write(b.getPropertyValue("font-size"));
+        document.write(b.getPropertyValue("font-weight"));
+        //2.Write a JavaScript program to use classList property on,
+        //<div id=”data” class=”defeat”>MY CLASS</div> to :
+        //a.Replace the class name to “book”
+        var c=document.getElementById("data");
+        c.className="book";
+        // b.Add a new class to the div(“seek”,”spotlight”)
+        c.classList.add("seek","spotlight");
+        //c.Remove the class(“seek”)
+        c.classList.remove("seek");
+        //d. Toggle a class(“hollow”)
+        c.classList.toggle("hallow");
+        //e.Write a if condition to check if the classname “seek” and “spotlight” exists.
+        if(c.classList.contains("seek"&&"spotlight")){
+            document.write("both class names are present");
+        }
+        else{
+            document.write("classname not found");
+        }
+        //3.Write a java script code to : 
+        //i.Get all the attribute from <a href=www.google.com target=”_hype_” id=”link1”>google</a>
+        var d=document.getElementById("link1");
+        var e=d.getAttribute("href");
+        var f=d.getAttribute("target");
+        document.write(e+f);
+        //ii. Set a new attribute kite with value sky 
+        d.setAttribute("kite","sky");
+        //iii. Change the existing attribute link to facebook link
+        d.setAttribute("href","https://www.facebook.com/");
+        //iv.Remove the attribute href from the element.
+        d.removeAttribute("href");
+         //4.Write a javascript program for Dom tree traversal. 
+        //  i.Get the value for the attribute charset in the head tag.
+         document.write(document.head.firstElementChild.nodeName);
+        var x=document.getElementById("header");
+        //ii.Count the number of children
+        if(x.hasChildNodes){
+            var node=x.childNodes;
+            for(let i=0;i<node.length;i++){
+              document.write(node[i].nodeName);
+            }
+        }
+        //iii.Set the color red for the first element child.
+        var s=document.getElementById("body");
+        s.firstElementChild.style.color="purple";
+        //iv. set fontstyle italic for the last element child.
+        s.lastElementChild.style.fontWeight="bold";
+        //v. Print the next element sibling to Uppercase.
+      var k=document.getElementById("para1");
+      document.write(k.nextElementSibling.nodeValue="hello".toUpperCase());
+
+
+        
+        
+
+        
+
+
+
+
+        
+
+
+
+
+    </script>
+    <p>thank you</p>
+</body>
+</html>

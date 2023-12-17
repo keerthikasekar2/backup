@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="d1" onmousedown="mouseDown()" onmouseup="mouseUp()">mouse up and mouse down</div>
+    <script>
+    function mouseDown(){
+        document.getElementById("d1").style.color="pink";
+
+    }
+    function mouseUp(){
+        document.getElementById("d1").style.color="red";
+    }
+
+
+    </script>
+    <p id="para1">show context menu</p>
+    <p id="para2">hide context menu</p>
+    <script>
+        var a=document.getElementById("para2");
+        a.addEventListener("contextmenu",(e)=>{
+            e.preventDefault();
+        })
+    </script>
+    <!-- on mouse enter and on mouse leave 
+    -->
+    <img src="C:\Users\DELL\Desktop\dogsite\img\adopt3.jpg" onmouseenter="image(this)" onmouseleave="bigimg(this)">
+    <img src="C:\Users\DELL\Desktop\dogsite\img\adopt3.jpg" onmouseover="img(this)" onmouseout="simg(this)">
+    <script>
+        function img(b){
+            b.style.height="100px";
+            b.style.width="100px";
+
+        }
+        function simg(b){
+            b.style.height="300px";
+            b.style.width="300px";
+
+        }
+        function image(a){
+            a.style.height="200px";
+            a.style.width="300px";
+        }
+        function bigimg(a){
+            a.style.height="50px";
+            a.style.width="50px";
+        }
+    </script>
+</body>
+</html>

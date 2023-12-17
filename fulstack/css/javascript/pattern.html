@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var n=5;
+        var str="";
+        // for(let i=0;i<n;i++){//square or rectangle
+        //     for(j=0;j<n;j++){
+        //         if(i===0||i===n-1){
+        //             str+="*";
+        //         }
+        //         else if(j===0||j===n-1){
+        //             str+="*"; 
+        //         }
+        //         else{
+        //             str+=" ";
+        //         }
+              
+        //     }str+="\n";
+
+        // }console.log(str);
+        for(let i=1;i<=n;i++){//triangle
+            for(j=0;j<n-i;j++){
+              str+="*";
+            }str+="\n";
+
+        }console.log(str);
+
+    </script>
+    <!-- <script>
+        var a=5
+        var str="";
+        for(let i=1;i<a;i++){
+            for(let j=1;j<a-i;j++){
+                str+=" ";
+                }
+            for(let k=0;k<2*i-1;k++){
+                  str+="*";  
+
+                }str+="\n";
+
+        }console.log(str);
+
+    </script>// prymid -->
+    <!-- <script>
+        var a=5
+        var str="";
+        for(let i=1;i<a;i++){
+            for(let j=1;j<i;j++){
+                str+=" ";
+                }
+            for(let k=0;k<2*(a-i)-1;k++){
+                  str+="*";  
+
+                }str+="\n";
+
+        }console.log(str);
+
+    </script>prymid reverse -->
+</body>
+</html>
